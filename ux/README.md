@@ -109,7 +109,7 @@ Una interfaz donde las TMs puedan ver y usar la data de progreso del LMS, para e
 ![Sketch](imagenes/scketch3.jpg)
 ![Sketch](imagenes/scketch4.jpg)
 ![Prototipo en Blanco y Negro](imagenes/prototipoblancoynegro.jpg)
-![Prototipo en Photoshop](imagenes/log in.png)
+![Prototipo en Photoshop](log in.png)
 ![Prototipo en Photoshop](imagenes/sedes-gen.png)
 ![Prototipo en Photoshop](imagenes/alumnas.png)
 
