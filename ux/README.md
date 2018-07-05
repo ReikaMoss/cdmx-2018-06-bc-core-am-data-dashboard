@@ -117,6 +117,7 @@ Una interfaz donde las TMs puedan ver y usar la data de progreso del LMS, para e
 
 Se presento el prototipo del Data Dashboard a Karla Rejas (Training Manager de Guadalajara), nos comenta que el diseño y los colores van acorde a la identidad de Laboratoria, el Dashboard es fácil de interpretar e intuitivo.
 
+
 ### **6. Argumentación de Visual Design**
 
 <Laboratoria> ya cuenta con una identidad por eso decidimos que el Data Dashboard tendría  el amarillo como color principal y magenta. Se agregaron los corchetes ya que  son su principal símbolo y son vistos como los símbolos del progreso y la transformación.

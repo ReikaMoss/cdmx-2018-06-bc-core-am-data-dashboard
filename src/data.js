@@ -1,20 +1,16 @@
-const objectLima = {
-    generacion:"tercera, cuarta, quinta"
-    }
-   const objectMex = {
-    generacion:"tercera, cuarta, quinta",
-   }
-   const objectSant = {
-    generacion:"tercera, cuarta, quinta",
-   }
+const url = 'https://raw.githubusercontent.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 
-   const objetoSedes = [objectLima,objectMex,objectSant];
+fetch( url ).then( r => r.json() )
+    .then( data => console.dir( data ) )
+    .catch( e => console.error( 'Something went wrong' ) );
 
-   window.generaciones = {
-    computeStudentsStats: () => {
-      for (var i = 0; i < objetoSedes.length; i++) {
-        return objetoSedes[i].generacion
-   
-      }
-    }
-   };
+
+/*window.sedes = () => {
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        renderInfo(data);
+    })
+
+*/}

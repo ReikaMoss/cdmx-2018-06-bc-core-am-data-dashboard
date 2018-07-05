@@ -1,15 +1,15 @@
-lima.addEventListener("click",event => {
-    let print = document.getElementById("generacionlima");
-    print.innerHTML = window.generaciones.computeStudentsStats();
-  }
-  );
-  mex.addEventListener("click",event => {
-    let print = document.getElementById("generacionmex");
-    print.innerHTML = window.generaciones.computeStudentsStats();
-  }
-  );
-  sant.addEventListener("click",event => {
-    let print = document.getElementById("generacionsant");
-    print.innerHTML = window.generaciones.computeStudentsStats();
-  }
-  );
+/*const container = document.getElementById('result');
+
+  renderInfo = (data) => {
+
+         let result = '';
+          console.log(Object.values(data)[0])
+         const info = Object.values(data)[0];
+
+          for (let i = 0; i <sedes.length; i++) {
+             result += sedes[i] + " ";
+
+
+   }
+document.getElementById("imprimir").innerHTML = result;
+*/
