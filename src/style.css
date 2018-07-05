@@ -1,0 +1,27 @@
+body   {
+    background-color:#fff400;
+    /*background-image: url("../images/fondo1.png");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    }
+
+image {
+    width: 350px;
+
+}
+
+.alinearSede{
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+.alinearSede1{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.alinearSede2 {
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;
+}
