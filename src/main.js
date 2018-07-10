@@ -12,55 +12,47 @@ console.log(sede);
 // let btn1 = document.querySelector('#cdmx');
 // let btn2 = document.querySelector('#santiago');
 
-<<<<<<< HEAD
-    for(let i = 0; i<generaciones.length; i++) {
-        sedeLima.innerHTML+= "<div>" + generaciones[i] + "</div>";
-            }
-
-console.log(data.lima.generacion.tercera.estudiantes);
-console.log(data.lima.generacion.cuarta.estudiantes);
-console.log(data.lima.generacion.quinta.estudiantes);
-      })
-
-  }
-  cdmx.addEventListener("click", function(){
-    sede1();
-  })
-let sede1 = function(){
-      fetch(urlDirection).then(function(datos){
-      return datos.json();
-      }).then(function(data){
-      console.log(data.mexico.generacion);
-      let sede1 = data.mexico.generacion;
-      console.log(Object.keys(sede1));
-      let generaciones = Object.keys(sede1);
-
-      console.log(generaciones[0]);
-    for(let i = 0; i<generaciones.length; i++) {
-        sedeMexico.innerHTML+= "<div>" + generaciones[i] + "</div>";
-
-=======
 // usando el boton de las sedes llamamos a la función para que aparezca en consola data>lima>generacion>cuarta
 // addEventLister, escucha los eventos del DOM
-sede.addEventListener('change', function(e) {
+sede.addEventListener('change', function (e) {
   let index = e.target.selectedIndex;
   let campus = e.target[index].dataset.sede;
   let generation = e.target[index].dataset.gen;
-  
-  
+
+
   // con el fetch se extrae la data del JSON y se realiza a través de promesas(then).
-  fetch(urlDirection).then(function(datos) {
+  fetch(urlDirection).then(function (datos) {
     // se retornan los datos del jason
     return datos.json();
-  }).then(function(data) {
+  }).then(function (data) {
     // Object.keys, devuelve un array cuyos elementos son strings correspondientes
     // a las propiedades enumerables que se encuentran dentro de un OBJETO
-    let sede = data[campus].generacion[generation].estudiantes;
-    console.log(sede);
-    
+    let infoEst = data[campus].generacion[generation].estudiantes;
+    console.log(infoEst);
+    const container = document.getElementById('result');
+
+
+    //let estudiantes = data[sedes[i]].generacion[generaciones[j]]//.estudiantes;
+    for (let l = 0; l < infoEst.length; l++) {
+      document.getElementById('tabla').innerHTML +=
+        `<div class="card">
+        <div class="info">
+        <p>Nombre: ${infoEst[l].nombre}</p>
+        <p>Correo: ${infoEst[l].correo}</p>
+        <p>Turno: ${infoEst[l].turno}</p>
+        <p>Progreso: ${infoEst[l].progreso.porcentajeCompletado}</p> `
+    }
+
+    document.getElementById('delete').addEventListener('click', (event) => {
+      container.innerHTML = '';
+      console.log(container);
+    })
+
+    console.log(infoEst);
+
     let sedes = Object.keys(data);
-      
-    // va a crear un arreglo dentro de un arreglo 
+
+    // va a crear un arreglo dentro de un arreglo
     let arrFinal = [];
 
     // sede es un arreglo
@@ -71,19 +63,18 @@ sede.addEventListener('change', function(e) {
     for (let i = 0; i < sedes.length; i++) {
       let drawSede = sedes[i];
       // sede.innerHTML = drawSede;
-        
+
       // el loop recorre las 3 generaciones de la variable generaciones
       let generaciones = Object.keys(data[sedes[i]].generacion);
 
       for (let j = 0; j < generaciones.length; j++) {
         let drawGeneracion = generaciones[j];
-        let estudiantes = data[sedes[i]].generacion[generaciones[j]].estudiantes;
 
         // el map  recorre todas las respuestas y devuelve un arreglo con las promesas de extraer la respuesta en JSON.
         // en este caso recorre la variable de estudiantes y nos regresa los arreglos dentro de ellas(nombre, mail,campus,%, etc..)
-        let est = estudiantes.map((usuario) => {
-          console.log(usuario);
-            
+        let est = infoEst.map((usuario) => {
+          // console.log(usuario);
+
 
           let porcentajeCompletado = usuario.progreso.porcentajeCompletado;
           let status = '';
@@ -91,7 +82,7 @@ sede.addEventListener('change', function(e) {
           // si el porcentaje de completado es menor de 60, nos mostrara a las estudiantes con bajo desempeño
           if (porcentajeCompletado < 60) {
             status = 'Estudiante con bajo desempeño';
-    
+
             // si no se cumple la primera entonces nos mostrara a las estudiantes que tengan un alto desempeño
           } else if (porcentajeCompletado > 90) {
             status = 'Estudiante con alto desempeño';
@@ -114,12 +105,10 @@ sede.addEventListener('change', function(e) {
           };
         });
         arrFinal.push(est);
-        
-        
-        console.log(est);
+        // console.log(est);
       }
-      console.log(arrFinal);
-      
+      // console.log(arrFinal);
+
       // concat se utiliza para unir dos o más arrays, no cambia el array existente; lo que va a hacer es devolver uno nuevo
       // arrconsolidado, nos va a unir el array que hemos creado y lo va a separar en objetos.
       let arrConsolidado = arrFinal[0].concat(
@@ -132,10 +121,16 @@ sede.addEventListener('change', function(e) {
         arrFinal[7],
         arrFinal[8]);
 
-      console.log(arrConsolidado);
-      
 
-    
+
+
+
+
+
+      // console.log(arrConsolidado);
+
+
+
       // let  = document.getElementById('sedeLima');
       // for (let k = 0; k < arrFinal.length; k++) {
       //   console.log(arrFinal);
@@ -146,17 +141,16 @@ sede.addEventListener('change', function(e) {
 
       // for (let sedeLima in alumnasLima){
       //  sedeLima = document.createElement("alumnas");
-      //  
+      //
       //  //sedeLima.textContent = mostrasAlumnas;
       //
       //  arrConsolidado.appendChild(sedeLima);
       //  console.log(arrConsolidado.appendChild);
-      //  
->>>>>>> upstream/master
+      //
     }
-      
+
 
     // .filter
   });
 });
-// lima.innerHTML = arrFinal;             
+// lima.innerHTML = arrFinal;

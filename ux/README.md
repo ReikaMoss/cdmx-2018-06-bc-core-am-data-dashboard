@@ -6,6 +6,8 @@ En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
 
 La principal medida de progreso de una estudiante en Laboratoria es su avance completando los proyectos de la Ruta de Aprendizaje y su desempeño en función a la Rúbrica de Niveles Esperados. Sin embargo, para completar estos proyectos las estudiantes acceden a contenidos de aprendizaje (lecturas, videos, ejercicios y quizzes) en un sistema que llaman LMS (Learning Management System). El LMS acumula data sobre quién leyó qué, qué ejercicios se han completado, los resultados de los quizzes, etc.
 
+Por este motivo se realizo una investigación para conocer con que herramientas realizan el seguimiento del progreso de las estudiantes y saber si estas son las más optimas para sus tareas del día a día.
+
 Para llevar a cabo esta  investigación nos apoyaron las siguientes Training Managers:
 
 * Lucile Baratier de Ciudad de México
@@ -83,16 +85,16 @@ __4. Data proporcionada:__
 
 * Sedes
 * Generaciones
-* Porcentaje general de completitud de c/estudiante
-* Porcentaje de completitud de todos los temas
-* Porcentaje de tiempo completado de cada tema
+* Completitud de c/estudiante
+* Completitud de todos los temas
+* Tiempo completado de cada tema
 * Subtemas de cada tema
 * Subtemas completados y no-completados de cada tema
 * Subtemas por tipos (ejercicios, lecturas y quizzes)
 * Promedio de la generación
-* Status para identificar estudiantes debajo del 60 en su porcentaje de completitud
-* Status para identificar estudiantes con 90 o más en su porcentaje de completitud
-* Nombre de estudiantes
+* Estudiantes debajo del 60 en su porcentaje de completitud
+* Estudiantes con 90 o más en su porcentaje de completitud
+* Nombre de las estudiantes
 
 __5. Insights del negocio:__
 
@@ -120,11 +122,15 @@ Se presento el prototipo del Data Dashboard a Karla Rejas (Training Manager de G
 
 ### **6. Argumentación de Visual Design**
 
-<Laboratoria> ya cuenta con una identidad por eso decidimos que el Data Dashboard tendría  el amarillo como color principal y magenta. Se agregaron los corchetes ya que  son su principal símbolo y son vistos como los símbolos del progreso y la transformación.
+Laboratoria ya cuenta con una identidad empresarial por eso decidimos que el Data Dashboard se apegara a los colores representativos,  el amarillo como color principal y negro. Se agregaran los corchetes ya que  son su principal símbolo y son vistos como los símbolos del progreso y la transformación.
 
 La tipografia que se utilizo es “Bitter” para los títulos y una “Open sans” para los textos, es contundente al expresarse por escrito, pero liviana al leer.
 
-Por ultimo se incluyo el slogan, “talento que transforma”, ya que enriquece su identidad visual.  
+Por ultimo se incluyo el slogan, “Talento que transforma”, ya que enriquece su identidad visual.
+
+### **7. UX Diseño centrado en el usuario**
+
+ La interfaz contara con una lista de despliegue donde estaran contenidas las tres sedes con sus respectivas generaciones, en donde al dar click en alguna generacion les mostrara en forma de Cards cada una de las estudiantes de dicha generacion, se realizo de esta manera ya que en el acercamiento de las TMs nos pudimos dar cuenta que la forma en la que visualizaban los datos era en tablas y eso les causaba friccion al tener que ver muy agrupada la data de las estudiantes, por ese motivo se opto que la informacion fuera individual y de  esta manera se agilizara el modo en el que visualizan y procesan la data para una mejor toma de decisiones. Por ultimo su diseño es responsive design, de modo que sera compatible con cualquier dispositivo movil.
 
 ## **Se anexa la encuesta que se envio a las TMs de Guadalajara y Lima**
 
