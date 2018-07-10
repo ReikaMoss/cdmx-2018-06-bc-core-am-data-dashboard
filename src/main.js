@@ -1,4 +1,3 @@
-
 // usar este archivo para todo el código que tenga que ver con mostrar los datos en la pantalla
 //let urlDirection obtiene el json de la data desde git hub
 
@@ -28,12 +27,9 @@ lima.addEventListener("click", function(){
 
     for(let i = 0; i<generaciones.length; i++) {
         sedeLima.innerHTML+= "<div>" + generaciones[i] + "</div>";
-        sedeLima.addEventListener("click",(e) =>{
-          console.log(e.target.innerHTML);
-        })
-        console.log(data.lima.generacion[generaciones[i]]);
             }
 
+console.log(data.lima.generacion.tercera.estudiantes);
 console.log(data.lima.generacion.cuarta.estudiantes);
 console.log(data.lima.generacion.quinta.estudiantes);
       })
