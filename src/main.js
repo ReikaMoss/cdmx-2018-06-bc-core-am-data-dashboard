@@ -30,7 +30,7 @@ sede.addEventListener('change', function (e) {
     let infoEst = data[campus].generacion[generation].estudiantes;
     console.log(infoEst);
     const container = document.getElementById('result');
-
+    
 
     //let estudiantes = data[sedes[i]].generacion[generaciones[j]]//.estudiantes;
     for (let l = 0; l < infoEst.length; l++) {
@@ -52,7 +52,7 @@ sede.addEventListener('change', function (e) {
 
     let sedes = Object.keys(data);
 
-    // va a crear un arreglo dentro de un arreglo
+    // va a crear un arreglo dentro de un arreglo 
     let arrFinal = [];
 
     // sede es un arreglo
@@ -69,7 +69,7 @@ sede.addEventListener('change', function (e) {
 
       for (let j = 0; j < generaciones.length; j++) {
         let drawGeneracion = generaciones[j];
-
+      
         // el map  recorre todas las respuestas y devuelve un arreglo con las promesas de extraer la respuesta en JSON.
         // en este caso recorre la variable de estudiantes y nos regresa los arreglos dentro de ellas(nombre, mail,campus,%, etc..)
         let est = infoEst.map((usuario) => {
@@ -124,7 +124,7 @@ sede.addEventListener('change', function (e) {
 
 
 
-
+      
 
 
       // console.log(arrConsolidado);
@@ -141,12 +141,12 @@ sede.addEventListener('change', function (e) {
 
       // for (let sedeLima in alumnasLima){
       //  sedeLima = document.createElement("alumnas");
-      //
+      //  
       //  //sedeLima.textContent = mostrasAlumnas;
       //
       //  arrConsolidado.appendChild(sedeLima);
       //  console.log(arrConsolidado.appendChild);
-      //
+      //  
     }
 
 
