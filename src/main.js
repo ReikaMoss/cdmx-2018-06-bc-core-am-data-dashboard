@@ -14,25 +14,29 @@ console.log(sede);
 
 // usando el boton de las sedes llamamos a la función para que aparezca en consola data>lima>generacion>cuarta
 // addEventLister, escucha los eventos del DOM
-sede.addEventListener('change', function (e) {
-  let index = e.target.selectedIndex;
-  let campus = e.target[index].dataset.sede;
-  let generation = e.target[index].dataset.gen;
+// change: al seleccionarlo va a desplegar el menu 
+sede.addEventListener('change', function(event) {
+  let index = event.target.selectedIndex; // nos selecciona el indice que esta detonando el evento
+  let campus = event.target[index].dataset.sede;
+  let generation = event.target[index].dataset.gen;
 
 
   // con el fetch se extrae la data del JSON y se realiza a través de promesas(then).
-  fetch(urlDirection).then(function (datos) {
-    // se retornan los datos del jason
+  fetch(urlDirection).then(function(datos) {
+    // se retornan los datos del jason, metodo intertno del fetch
     return datos.json();
-  }).then(function (data) {
-    // Object.keys, devuelve un array cuyos elementos son strings correspondientes
-    // a las propiedades enumerables que se encuentran dentro de un OBJETO
+    // se le asigna otra promesa 
+  }).then(function(data) {
+    // Object.keys, devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran dentro de un OBJETO
     let infoEst = data[campus].generacion[generation].estudiantes;
     console.log(infoEst);
     const container = document.getElementById('result');
-    
 
-    //let estudiantes = data[sedes[i]].generacion[generaciones[j]]//.estudiantes;
+    document.getElementById('borrar').addEventListener('click', (event) => {
+      container.innerHTML = '';
+      console.log(container);
+    });
+  
     for (let l = 0; l < infoEst.length; l++) {
       document.getElementById('tabla').innerHTML +=
         `<div class="card">
@@ -40,13 +44,9 @@ sede.addEventListener('change', function (e) {
         <p>Nombre: ${infoEst[l].nombre}</p>
         <p>Correo: ${infoEst[l].correo}</p>
         <p>Turno: ${infoEst[l].turno}</p>
-        <p>Progreso: ${infoEst[l].progreso.porcentajeCompletado}</p> `
+        <p>Progreso: ${infoEst[l].progreso.porcentajeCompletado}</p> `;
     }
-
-    document.getElementById('delete').addEventListener('click', (event) => {
-      container.innerHTML = '';
-      console.log(container);
-    })
+    
 
     console.log(infoEst);
 
@@ -62,7 +62,6 @@ sede.addEventListener('change', function (e) {
     // .length de un objeto String representa la longitud de una cadena
     for (let i = 0; i < sedes.length; i++) {
       let drawSede = sedes[i];
-      // sede.innerHTML = drawSede;
 
       // el loop recorre las 3 generaciones de la variable generaciones
       let generaciones = Object.keys(data[sedes[i]].generacion);
@@ -120,37 +119,6 @@ sede.addEventListener('change', function (e) {
         arrFinal[6],
         arrFinal[7],
         arrFinal[8]);
-
-
-
-
-      
-
-
-      // console.log(arrConsolidado);
-
-
-
-      // let  = document.getElementById('sedeLima');
-      // for (let k = 0; k < arrFinal.length; k++) {
-      //   console.log(arrFinal);
-      //   const alumnasLima = name.filter();
-      //   console.log(alumnasLima);
-      // }
-
-
-      // for (let sedeLima in alumnasLima){
-      //  sedeLima = document.createElement("alumnas");
-      //  
-      //  //sedeLima.textContent = mostrasAlumnas;
-      //
-      //  arrConsolidado.appendChild(sedeLima);
-      //  console.log(arrConsolidado.appendChild);
-      //  
     }
-
-
-    // .filter
   });
 });
-// lima.innerHTML = arrFinal;

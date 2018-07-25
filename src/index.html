@@ -9,10 +9,9 @@
   </head>
   <body>
     <header>
-    <img src="../Images/Imagen2.png" alt="">
-  </header>
+    <img src="../Images/Imagen2.png" class="img-fluid" alt="Responsive image">
 
- <!-- <select class="form-control form-control-lg" id="sedes">-->
+  </header>
     <select class="custom-select custom-select-lg mb-3" id="sedes">
     <option selected value= "0">Elige una generación</option>
     <optgroup label= "lima">
@@ -31,37 +30,11 @@
          <option value="9"data-gen="quinta" data-sede="santiago" id="santiagoQuinta">quinta generacion</option>
        </optgroup>
   </select>
-  <button id="delete">Borrar</button>
+  <button type="button" class="btn btn-secondary" id="borrar">Borrar</button>
+</button>
   <div id="result"></div>
 
   <div id= "tabla"></div>
-
-
-
-    <!--<select name="" id="sedes">
-      <option id = "sedeLima" value = "lima">lima</option>
-      <option id = "sedeMexico" value ="mexico">mexico</option>
-      <option id = "sedeSantiago" value ="santiago">santiago </option>
-    </select>-->
-       
-
-<!--<div class="alinearSede" id="botonesSede">
-<input type="button"  value="lima" id="lima">
-<div id="result">
-</div>
-
-</div>
-
-<div class="alinearSede1" id="botonesSede1">
-<p><input type="button" value="mexico" id="cdmx"></p>
-
-</div>
-
-<div class="alinearSede2" id="botonesSede2">
-<input type="button" value="santiago" id="santiago">
-
-</div>-->
-
 
     <script src="main.js"></script>
     <script src="data.js"></script>
