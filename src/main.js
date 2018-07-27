@@ -11,12 +11,12 @@ window.onload = () => {
   });
 };
 
-let sede = document.getElementById('sedes');
-console.log(sede);
+let campus = document.getElementById('sedes');
+// console.log(campus);
 // usando el boton de las sedes llamamos a la función para que aparezca en consola data>lima>generacion>cuarta
 // addEventLister, escucha los eventos del DOM
 // change: al seleccionarlo va a desplegar el menu 
-sede.addEventListener('change', function(event) {
+campus.addEventListener('change', function(event) {
   let index = event.target.selectedIndex; // nos selecciona el indice que esta detonando el evento
   let campus = event.target[index].dataset.sede;
   let generation = event.target[index].dataset.gen;
@@ -29,27 +29,26 @@ sede.addEventListener('change', function(event) {
     // se le asigna otra promesa 
   }).then(function(data) {
     // Object.keys, devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran dentro de un OBJETO
-    let infoEst = data[campus].generacion[generation].estudiantes;
-    console.log(infoEst);
+    let infoStudents = data[campus].generacion[generation].estudiantes;
+    console.log(infoStudents);
     const container = document.getElementById('result');
-
-    document.getElementById('borrar').addEventListener('click', (event) => {
-      container.innerHTML = '';
-      console.log(container);
-    });
   
-    for (let l = 0; l < infoEst.length; l++) {
-      document.getElementById('tabla').innerHTML +=
+    const tabla = document.getElementById('tabla');
+    tabla.innerHTML = '';
+  
+    for (let l = 0; l < infoStudents.length; l++) {
+
+      tabla.innerHTML +=
         `<div class="card">
         <div class="info">
-        <p>Nombre: ${infoEst[l].nombre}</p>
-        <p>Correo: ${infoEst[l].correo}</p>
-        <p>Turno: ${infoEst[l].turno}</p>
-        <p>Progreso: ${infoEst[l].progreso.porcentajeCompletado}</p> `;
+        <p>Nombre: ${infoStudents[l].nombre}</p>
+        <p>Correo: ${infoStudents[l].correo}</p>
+        <p>Turno: ${infoStudents[l].turno}</p>
+        <p>Progreso: ${infoStudents[l].progreso.porcentajeCompletado}</p> `;
     }
     
 
-    console.log(infoEst);
+    console.log(infoStudents);
 
     let sedes = Object.keys(data);
 
@@ -72,7 +71,7 @@ sede.addEventListener('change', function(event) {
       
         // el map  recorre todas las respuestas y devuelve un arreglo con las promesas de extraer la respuesta en JSON.
         // en este caso recorre la variable de estudiantes y nos regresa los arreglos dentro de ellas(nombre, mail,campus,%, etc..)
-        let est = infoEst.map((usuario) => {
+        let students = infoStudents.map((usuario) => {
           // console.log(usuario);
 
 
@@ -104,7 +103,7 @@ sede.addEventListener('change', function(event) {
             }
           };
         });
-        arrFinal.push(est);
+        arrFinal.push(students);
         // console.log(est);
       }
       // console.log(arrFinal);
