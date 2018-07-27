@@ -1,17 +1,18 @@
 // usar este archivo para todo el código que tenga que ver con mostrar los datos en la pantalla
 // la direccion para utilizar el JSON se sacó de la pagina http://myjson.com/ la cual creo una API para poder extraer los datos de JSON
-
 let urlDirection = 'https://api.myjson.com/bins/9n48i';
+window.onload = () => {
+  fetch(urlDirection).then(function(datos) {
+    // se retornan los datos del jason, metodo intertno del fetch
+    return datos.json();
+    // se le asigna otra promesa 
+  }).then(function(data) {
+
+  });
+};
+
 let sede = document.getElementById('sedes');
 console.log(sede);
-
-// let sedeLima = document.querySelector('#botonesSede');
-// let sedeMexico = document.querySelector('#botonesSede1');
-// let sedeSantiago = document.querySelector('#botonesSede2');
-// let btn = document.querySelector('#lima');
-// let btn1 = document.querySelector('#cdmx');
-// let btn2 = document.querySelector('#santiago');
-
 // usando el boton de las sedes llamamos a la función para que aparezca en consola data>lima>generacion>cuarta
 // addEventLister, escucha los eventos del DOM
 // change: al seleccionarlo va a desplegar el menu 
@@ -64,7 +65,7 @@ sede.addEventListener('change', function(event) {
       let drawSede = sedes[i];
 
       // el loop recorre las 3 generaciones de la variable generaciones
-      let generaciones = Object.keys(data[sedes[i]].generacion);
+      generaciones = Object.keys(data[sedes[i]].generacion);
 
       for (let j = 0; j < generaciones.length; j++) {
         let drawGeneracion = generaciones[j];
