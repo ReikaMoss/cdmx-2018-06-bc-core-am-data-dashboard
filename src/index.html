@@ -9,10 +9,9 @@
   </head>
   <body>
     <header>
-    <img src="../Images/Imagen2.png" alt="">
-  </header>
+    <img src="../Images/Imagen2.png" class="img-fluid" alt="Responsive image">
 
- <!-- <select class="form-control form-control-lg" id="sedes">-->
+  </header>
     <select class="custom-select custom-select-lg mb-3" id="sedes">
     <option selected value= "0">Elige una generación</option>
     <optgroup label= "lima">
@@ -22,16 +21,16 @@
     </optgroup>
     <optgroup label="mexico">
       <option value="4" data-gen="tercera" data-sede="mexico" id="mexicoTercera">tercera generacion</option>
-      <option value="5"data-gen="cuarta" data-sede="mexico" id="mexicoCuarta">cuarta generacion</option>
-      <option value="6"data-gen="quinta" data-sede="mexico" id="mexicoQuinta">quinta generacion</option>
+      <option value="5" data-gen="cuarta" data-sede="mexico" id="mexicoCuarta">cuarta generacion</option>
+      <option value="6" data-gen="quinta" data-sede="mexico" id="mexicoQuinta">quinta generacion</option>
     </optgroup>
     <optgroup label="santiago">
       <option value="7" data-gen="tercera" data-sede="santiago" id="santiagoTercera">tercera generacion</option>
-      <option value="8"data-gen="cuarta" data-sede="santiago" id="santiagoiCuarta">cuarta generacion</option>
-         <option value="9"data-gen="quinta" data-sede="santiago" id="santiagoQuinta">quinta generacion</option>
+      <option value="8" data-gen="cuarta" data-sede="santiago" id="santiagoiCuarta">cuarta generacion</option>
+         <option value="9" data-gen="quinta" data-sede="santiago" id="santiagoQuinta">quinta generacion</option>
        </optgroup>
   </select>
-  <button id="delete">Borrar</button>
+  <button type="button" class="btn btn-secondary" id="borrar">Borrar</button>
   <div id="result"></div>
 
   <div id= "tabla"></div>
