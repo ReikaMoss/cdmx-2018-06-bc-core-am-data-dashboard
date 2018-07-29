@@ -8,13 +8,15 @@
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   </head>
   <body>
+    <div class="titulo offset-4 col-4">
     <header>
-    <img src="../Images/Imagen2.png" class="img-fluid" alt="Responsive image">
+    <img id="logo" src="../Images/Imagen2.png" class="img-fluid" alt="Responsive image">
+    </header>
+    </div>
 
-  </header>
-  <div class="container">
-    <div class="row">
-    <select class="custom-select custom-select-lg mb-3" id="sedes">
+
+    <div class="lista">
+    <select  class="custom-select custom-select-lg mb-3" id="sedes">
     <option selected value= "0">Elige una generación</option>
     <optgroup label= "lima">
       <option value= "1" data-gen="tercera" data-sede="lima" id="limaTercera">tercera generacion Lima</option>
@@ -32,13 +34,17 @@
          <option value="9" data-gen="quinta" data-sede="santiago" id="santiagoQuinta">quinta generacion Chile</option>
        </optgroup>
   </select>
-  
-    
-  <div id="result"></div>
-
-  <div id= "tabla"></div>
   </div>
+
+  <div class="tamaño">
+  <div id="result"></div>
+  </div>
+
+<div class="alinear">
+  <div id= "tabla"></div>
 </div>
+  <!-- </div>
+</div> -->
 
     <script src="main.js"></script>
     <script src="data.js"></script>
