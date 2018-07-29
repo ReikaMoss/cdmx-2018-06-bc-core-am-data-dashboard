@@ -32,7 +32,8 @@ campus.addEventListener('change', function(event) {
     let infoStudents = data[campus].generacion[generation].estudiantes;
     console.log(infoStudents);
     const container = document.getElementById('result');
-  
+    
+    // aquí se pintan las estudiantes y se cambian cada que se da click en diferente generación.
     const tabla = document.getElementById('tabla');
     tabla.innerHTML = '';
   
