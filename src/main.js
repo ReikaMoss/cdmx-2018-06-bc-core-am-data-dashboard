@@ -28,11 +28,12 @@ campus.addEventListener('change', function(event) {
     return datos.json();
     // se le asigna otra promesa 
   }).then(function(data) {
-    // Object.keys, devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran dentro de un OBJETO
+  
     let infoStudents = data[campus].generacion[generation].estudiantes;
     console.log(infoStudents);
     const container = document.getElementById('result');
-  
+    
+    // aquí se pintan las estudiantes y se cambian cada que se da click en diferente generación.
     const tabla = document.getElementById('tabla');
     tabla.innerHTML = '';
   
@@ -50,6 +51,7 @@ campus.addEventListener('change', function(event) {
 
     console.log(infoStudents);
 
+    // Object.keys, devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran dentro de un OBJETO
     let sedes = Object.keys(data);
 
     // va a crear un arreglo dentro de un arreglo 
