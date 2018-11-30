@@ -111,9 +111,9 @@ Una interfaz donde las TMs puedan ver y usar la data de progreso del LMS, para e
 ![Sketch](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/sketch3.jpg?raw=true)
 ![Sketch](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/scketch4.jpg?raw=true)
 ![Prototipo en Blanco y Negro](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/prototipoblancoynegro.jpg?raw=true)
-![Prototipo en Photoshop](log in.png)
-![Prototipo en Photoshop](imagenes/sedes-gen.png)
-![Prototipo en Photoshop](imagenes/alumnas.png)
+![Prototipo en Photoshop](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/log%20in.png?raw=true)
+![Prototipo en Photoshop](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/sedes-gen.png?raw=true)
+![Prototipo en Photoshop](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/alumnas.png?raw=true)
 
 ### **5. User testing**
 
