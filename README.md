@@ -106,7 +106,7 @@ Una interfaz donde las TMs puedan ver y usar la data de progreso del LMS, para e
 
 ### **4. Prototipado**
 
-![Sketch](imagenes/scketch1.jpg)
+![Sketch](https://github.com/ReikaMoss/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/imagenes/scketch1.jpg?raw=true)
 ![Sketch](imagenes/scketch2.jpg)
 ![Sketch](imagenes/scketch3.jpg)
 ![Sketch](imagenes/scketch4.jpg)
